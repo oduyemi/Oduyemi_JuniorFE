@@ -13,7 +13,7 @@ const Home: React.FC = () => {
         <>
             <Banner />
             <SearchForm />
-            <Box className="mt-8">
+            <Box className="mt-14">
                 <DataGrid />
             </Box>
             <Footer />
