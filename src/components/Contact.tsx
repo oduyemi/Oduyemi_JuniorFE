@@ -13,8 +13,8 @@ export const Contact: React.FC<ContactProps> = ({ open, onClose }) => {
     
     return(
         <Modal isOpen={open} onRequestClose={onClose} className="Modal">
-      <Box className="grid items-center justify-center bg-white bg-opacity-75">
-        <Box className="formbox bg-main text-gray-300 rounded-3xl shadow-xl w-full py-6 md:py-8 mb-10 mt-4">
+      <Box margin="14px" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-lg text-black">
+        <Box className="">
             <button
                 onClick={onClose}
                 className="absolute top-2 right-2 text-red-500 hover:text-red-700"
