@@ -26,7 +26,7 @@ const Home: React.FC = () => {
     <>
       <Banner id="home" />
       <SearchForm id="search" />
-      <Box className="mt-14">
+      <Box className="mt-5">
         <DataGrid id="rockets" rocketData={rocketData} />
       </Box>
       <Footer />

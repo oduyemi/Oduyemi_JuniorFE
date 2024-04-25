@@ -48,6 +48,46 @@ body{
   }
 
   .banner{
-    margin-top: -2%;
+    margin-top: 4% !important;
   }
+
+  .topic{
+    font-size: 42px !important;
+  }
+
+  .topic-md{
+    font-size: larger;
+  }
+
+  .upped{
+    margin-top: -10%;
+    margin-bottom: -10%;
+  }
+
+  .side{
+    margin-left:20px !important;
+  }
+
+  .rside{
+    margin-right: 10px !important;
+  }
+ 
+  .gap{
+    padding: 0%;
+  }
+
+  .inner-text{
+    font-size: large;
+    text-align: inherit;
+  }
+
+  .inner-text-sm{
+    font-size: medium;
+  }
+
+  .title{
+    font-size: 30px !important;
+  }
+
 }
+

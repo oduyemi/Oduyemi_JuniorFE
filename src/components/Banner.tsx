@@ -21,12 +21,12 @@ export const Banner: React.FC <{ id: string }> = () => {
                 <Box id="home" className="flex flex-col justify-center items-start p-8 introdesc">
                     <Typography
                       variant="h1"
-                      className="text-3xl md:text-5xl p-2 text-yel tracking-loose animate__animated animate__fadeIn animated__delay__4 animate-pulse">
+                      className="title text-3xl md:text-5xl p-2 text-yel tracking-loose animate__animated animate__fadeIn animated__delay__4 animate-pulse">
                       SpaceX
                     </Typography>
                     <Typography 
                       variant="h2"
-                      className="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2"
+                      className="topic text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2"
                       sx={{
                         fontSize: "42x"
                       }}
