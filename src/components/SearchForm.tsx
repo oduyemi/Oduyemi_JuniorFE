@@ -95,7 +95,7 @@ export const SearchForm: React.FC<{ id: string }> = ({ id }) => {
         Specialized search. Search for a specific rocket according to its
         status, original launch, or type.
       </Typography>
-      <Box margin="10px" className="mb-8">
+      <Box margin="10px" className="mb-8 py-5">
         <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4">
           <Box maxWidth="sm" className="flex text-black">
             <input
