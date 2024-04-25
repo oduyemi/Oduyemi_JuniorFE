@@ -5,7 +5,6 @@ import { Box, Typography } from "@mui/material";
 export const SearchForm: React.FC<{ id: string }> = ({ id }) => {
   const [rocketData, setRocketData] = useState<any>(null);
   const [rocketId, setRocketId] = useState<string>("");
-  const [status, setStatus] = useState<string>("");
   const [launchDate, setLaunchDate] = useState<string>("");
   const [rocketType, setRocketType] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
@@ -16,10 +15,6 @@ export const SearchForm: React.FC<{ id: string }> = ({ id }) => {
       let apiUrl = `https://api.spacexdata.com/v3/rockets/${rocketId}`;
   
       const queryParams = [];
-  
-      if (status) {
-        queryParams.push(`status=${status}`);
-      }
       if (launchDate) {
         apiUrl = `https://api.spacexdata.com/v3/rockets/${launchDate}`;
       }
