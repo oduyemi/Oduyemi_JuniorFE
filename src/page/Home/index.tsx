@@ -24,10 +24,10 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Banner />
-      <SearchForm />
+      <Banner id="home" />
+      <SearchForm id="search" />
       <Box className="mt-14">
-        <DataGrid rocketData={rocketData} />
+        <DataGrid id="rockets" rocketData={rocketData} />
       </Box>
       <Footer />
     </>

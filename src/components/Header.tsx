@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
 
 export const Header: React.FC = () => {
   return (
@@ -9,21 +10,25 @@ export const Header: React.FC = () => {
             <Box maxWidth="l" className="flex-grow basis-[100%] items-center lg:!flex lg:basis-auto" id="navbarSupportedContentY" data-te-collapse-item>
             <ul className="mr-auto lg:flex lg:flex-row" data-te-navbar-nav-ref>
                 <li data-te-nav-item-ref>
-                <Link className="block py-2 pr-2 text-neutral-500 transition duration-150 ease-in-out hover:text-neutral-600 focus:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 dark:disabled:text-white/30 lg:px-2 [&.active]:text-black/80 dark:[&.active]:text-white/80" to="/" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light">
+                <ScrollLink className="block point py-2 pr-2 text-white transition duration-150 ease-in-out hover:text-yel focus:text-yel lg:px-2 [&.active]:text-black/80 dark:[&.active]:text-white/80" to="home" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light">
                     S P A C E &nbsp;X &emsp; &emsp;
-                </Link>
+                </ScrollLink>
                 </li>
             </ul>
             </Box>
 
             <Box maxWidth="sm" className="my-1 flex items-center lg:my-0 lg:flex lg:ml-auto menu_items">
-                <Link className="block py-2 pr-2 text-neutral-500 transition duration-150 ease-in-out hover:text-neutral-600 focus:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 dark:disabled:text-white/30 lg:px-2 [&.active]:text-black/80 dark:[&.active]:text-white/80" to="#!" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light">
+                <ScrollLink className="block point py-2 pr-2 text-white transition duration-150 ease-in-out hover:text-yel focus:text-yel lg:px-2 [&.active]:text-black/80 dark:[&.active]:text-white/80" to="rockets" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light">
                     All Rockets
-                </Link>
+                </ScrollLink>
 
-                <Link className="block py-2 pr-2 text-neutral-500 transition duration-150 ease-in-out hover:text-neutral-600 focus:text-neutral-600 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 dark:disabled:text-white/30 lg:px-2 [&.active]:text-black/80 dark:[&.active]:text-white/80" to="#!" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light">
+                <ScrollLink className="block point py-2 pr-2 text-white transition duration-150 ease-in-out hover:text-yel focus:text-yel lg:px-2 [&.active]:text-black/80 dark:[&.active]:text-white/80" to="search" data-te-nav-link-ref data-te-ripple-init data-te-ripple-color="light">
                     Find A Rocket
-                </Link>
+                </ScrollLink>
+
+                <button className="block py-2 pr-2 ml-3 bg-transparent transition duration-150 ease-in-out border-none text-white hover:text-yel rounded shadow">
+                    Contact
+                </button>
             </Box>
 
       </Box>

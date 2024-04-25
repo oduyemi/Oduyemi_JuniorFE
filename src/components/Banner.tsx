@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { ImageSlider } from "./ImageSlider";
 
 
@@ -8,7 +8,7 @@ import { ImageSlider } from "./ImageSlider";
 
 
 
-export const Banner: React.FC = () => {
+export const Banner: React.FC <{ id: string }> = () => {
   const images = [
     require("../assets/images/a.png"),
     require("../assets/images/b.png"),
@@ -16,12 +16,12 @@ export const Banner: React.FC = () => {
   ];
   return (
     <>
-        <Box className="bg-[#0F1A20] text-white pb-20">
+        <Box className="bg-main text-white pb-20">
             <Box maxWidth="md" className="mx-auto flex flex-col md:flex-row items-center my-12 md:my-24 banner">
-                <Box  className="flex flex-col justify-center items-start p-8 introdesc">
+                <Box id="home" className="flex flex-col justify-center items-start p-8 introdesc">
                     <Typography
                       variant="h1"
-                      className="text-3xl md:text-5xl p-2 text-yellow-300 tracking-loose animate__animated animate__fadeIn animated__delay__4 animate-pulse">
+                      className="text-3xl md:text-5xl p-2 text-yel tracking-loose animate__animated animate__fadeIn animated__delay__4 animate-pulse">
                       SpaceX
                     </Typography>
                     <Typography 
@@ -36,9 +36,9 @@ export const Banner: React.FC = () => {
                     <Typography variant="h5" paragraph className="text-sm md:text-base text-gray-50 mb-4">
                       SpaceX has now landed more boosters than most other rockets ever!
                     </Typography>
-                    <Link to="#"
-                        className="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent">
-                        Explore Now</Link>
+                    <ScrollLink to="rockets"
+                        className="bg-transparent point hover:bg-yel text-yel hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yel hover:border-transparent">
+                        Explore Now</ScrollLink>
                 </Box>
 			          <Box maxWidth="md" className="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3 slider justify-center">
 						      <ImageSlider images={images} />

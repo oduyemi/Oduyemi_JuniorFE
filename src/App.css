@@ -10,8 +10,8 @@
 }
 
 body{
-  background-color: #0F1A20;
-  color: #fff;
+  background-color: #150578;
+  color: #F6F7F8;
   overflow-x: hidden;
   scroll-behavior: smooth; 
 }
@@ -23,13 +23,15 @@ body{
 #root{
   height:100%;
 }
-/* 
+
 .App{
   min-height: 100vh;
   height: auto; 
-} */
+}
 
-
+.point{
+  cursor: pointer;
+}
 
 .introdesc{
   margin-top: -6%;

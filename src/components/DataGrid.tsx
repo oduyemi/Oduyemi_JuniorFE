@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 interface RocketData {
   id: number;
@@ -50,7 +50,7 @@ interface RocketData {
 const DataCard: React.FC<{ rocketData: RocketData }> = ({ rocketData }) => {
   return (
     <Box className="rounded overflow-hidden shadow-lg flex flex-col">
-      <Link to="#">
+      <ScrollLink to="#">
         <Box className="relative">
           {/* Display the first image if available */}
           {rocketData.flickr_images.length > 0 && (
@@ -62,34 +62,34 @@ const DataCard: React.FC<{ rocketData: RocketData }> = ({ rocketData }) => {
           )}
           <Box className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></Box>
         </Box>
-      </Link>
+      </ScrollLink>
       <Box className="px-6 py-4 mb-auto">
-        <Link
+        <ScrollLink
           to="#"
           className="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
         >
           {rocketData.country}
-        </Link>
+        </ScrollLink>
       </Box>
       <Box className="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
         <span className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
-          <Link to="#">
+          <ScrollLink to="#">
             <span className="ml-1">{rocketData.first_flight}</span>
-          </Link>
+          </ScrollLink>
         </span>
         <span className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
-          <Link to="#">
+          <ScrollLink to="#">
             <span className="ml-1">
               {rocketData.payload_weights[0].name}
             </span>
-          </Link>
+          </ScrollLink>
         </span>
       </Box>
     </Box>
   );
 };
 
-export const DataGrid: React.FC<{ rocketData: RocketData[] }> = ({
+export const DataGrid: React.FC<{ id: string; rocketData: RocketData[] }> = ({
   rocketData,
 }) => {
   return (
@@ -102,9 +102,9 @@ export const DataGrid: React.FC<{ rocketData: RocketData[] }> = ({
         className="mt-5 mb-3 text-5xl topic lg:pl-8 ml-auto"
       >
         All
-        <span>{" "}
-          <Typography variant="h1" className="text-yellow-300 topic inline">
-            rockets
+        <span id="rockets">{" "}
+          <Typography variant="h1" className="text-yel topic inline">
+            Rockets
           </Typography>{" "}
         </span>
       </Typography>
